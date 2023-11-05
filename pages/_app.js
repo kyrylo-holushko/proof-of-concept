@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 import 'materialize-css/dist/css/materialize.min.css'
 import { useEffect } from 'react'
-import Head from 'next/head';
+import Head from 'next/head'
+import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {
 
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
                 <meta name="Golden Abalone Bistro" content="demo next app" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>  
         </>
     )   
 }
