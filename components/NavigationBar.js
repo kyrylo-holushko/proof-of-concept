@@ -39,7 +39,7 @@ export default function NavigationBar() {
     //
     return (
         <>
-            <Navbar menuIcon={<Icon>menu</Icon>}>
+            <Navbar menuIcon={<Icon>menu</Icon>} className="yellow darken-3">
                 <Link href="/"><NavItem>Home</NavItem></Link>
                 <Link href="/menu"><NavItem>Menu</NavItem></Link>
                 <Link href="/contact"><NavItem>Contact</NavItem></Link>
