@@ -28,7 +28,7 @@ export default function Contact() {
                         <li>8:30am – 2am</li>
                     </big>
                 </div>
-                <br/><br/>
+                <br/><br/><br/>
             </Container>
         </>
     )

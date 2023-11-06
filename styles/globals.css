@@ -3,10 +3,10 @@
 }
 
 .custom-footer {
-	min-height: 64px;
+	height: 64px;
+	width: 100%;
 	position: fixed;
 	bottom: 0;
-	width: 100%;
 }
 
 li {
@@ -15,4 +15,8 @@ li {
 
 .hours {
 	text-align: left;
+}
+
+.footer-padding {
+	padding-bottom: 64px;
 }
