@@ -1,5 +1,6 @@
 //import { useEffect, useState } from "react"
 import { Icon, Navbar, NavItem } from "react-materialize"
+import Link from "next/link";
 
 if (typeof window !== 'undefined') {
     require('materialize-css');
@@ -39,9 +40,9 @@ export default function NavigationBar() {
     return (
         <>
             <Navbar menuIcon={<Icon>menu</Icon>}>
-                <NavItem>First</NavItem>
-                <NavItem>Second</NavItem>
-                <NavItem>Third</NavItem>
+                <Link href="/"><NavItem>Home</NavItem></Link>
+                <Link href="/menu"><NavItem>Menu</NavItem></Link>
+                <Link href="/contact"><NavItem>Contact</NavItem></Link>
             </Navbar>
         </>
     )
