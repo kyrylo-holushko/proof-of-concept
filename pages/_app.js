@@ -3,6 +3,9 @@ import 'materialize-css/dist/css/materialize.min.css'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
+import { SWRConfig } from 'swr';
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 function MyApp({ Component, pageProps }) {
 
@@ -20,9 +23,11 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout>
-                <div className="footer-padding">
-                    <Component {...pageProps}/>
-                </div>
+                <SWRConfig value={{ fetcher }}>
+                    <div className="footer-padding">
+                        <Component {...pageProps}/>
+                    </div>
+                </SWRConfig>
             </Layout>  
         </>
     )   
