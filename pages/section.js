@@ -1,11 +1,15 @@
 //import Card component
+import useSWR from "swr"
 
 
 export default function Section(){
 
+    //const { data } = useSWR('http://localhost:3000/api/hello');
+    const { data } = useSWR(menu ? `http://localhost:3000/api/${menu}` : null);
+
     return (
         <>
-
+            
         </>
     )
 
