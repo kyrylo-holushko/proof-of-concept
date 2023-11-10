@@ -7,6 +7,11 @@ export default function Menu() {
     const [show, setShow] = useState(false);
 
     const { data } = useSWR('http://localhost:3000/api/hello');
+
+    //https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7
+    //https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u
+    //https://res.cloudinary.com/dmtjposo5/gab/dessert/jlusmortt9bltxktrzxw
+    //https://res.cloudinary.com/dmtjposo5/gab/beverage/kcppriy7nikyshpzxjmr
     
     return (
         <>
