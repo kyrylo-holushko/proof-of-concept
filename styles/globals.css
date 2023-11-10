@@ -1,3 +1,10 @@
+:root {
+	--appetizer: url("https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7");
+	--main: url("https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u");
+	--dessert: url("https://res.cloudinary.com/dmtjposo5/gab/dessert/jlusmortt9bltxktrzxw");
+	--beverage: url("https://res.cloudinary.com/dmtjposo5/gab/beverage/kcppriy7nikyshpzxjmr");
+}
+
 .center-text {
 	text-align: center;
 }
@@ -29,8 +36,7 @@ li {
 }
 
 .menu-section {
-	background-image: url("https://soranews24.com/wp-content/uploads/sites/3/2021/10/pad-thai-oatmeal1.jpg?resize=780,585");
-	background-size: contain;
+	background-size: cover, contain;
 	aspect-ratio: inherit;
 	border-radius: inherit;
 	cursor: pointer;
@@ -46,6 +52,8 @@ li {
 .menu-title {
 	display: inline-block;
 	color: white;
-	text-shadow: 0 0 4px grey, 0 0 8px black;
+	text-shadow: 0 0 4px black, 0 0 8px black;
 	font-size: 2.5em;
 }
+
+.appetizer-bg-img {background-image: var(--appetizer)}

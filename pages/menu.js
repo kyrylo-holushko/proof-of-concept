@@ -25,14 +25,8 @@ export default function Menu() {
                         <h2>Menu Page</h2>
                         <br/><br/>
                         <div className="menu-canvas">
-                            <div className="menu-section center-align">
-                                
-                                    <div className="center-align valign-wrapper">
-                                        <h3 className="menu-title">Appetizers</h3>
-                                    </div>
-                                        
-                                       
-                                
+                            <div className="menu-section center-align appetizer-bg-img">
+                                <h3 className="menu-title">Appetizers</h3>
                             </div>
                         </div>
                     </Col>
