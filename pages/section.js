@@ -1,5 +1,6 @@
 //import Card component
 import useSWR from "swr"
+import { Card } from "react-materialize";
 
 
 export default function Section(){
@@ -9,7 +10,7 @@ export default function Section(){
 
     return (
         <>
-            
+
         </>
     )
 

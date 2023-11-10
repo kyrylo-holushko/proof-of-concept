@@ -1,5 +1,4 @@
 import { Container, Row, Col, Card, CardTitle, Icon } from "react-materialize"
-import useSWR from "swr"
 import { useState, useContext } from "react";
 import { MenuContext } from "./_app";
 import { useRouter } from "next/router";
@@ -12,7 +11,7 @@ export default function Menu() {
 
     //const [show, setShow] = useState(false);
 
-    //const { data } = useSWR('http://localhost:3000/api/hello');
+    //
 
     //https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7
     //https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u
