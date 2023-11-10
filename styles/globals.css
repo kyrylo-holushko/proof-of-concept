@@ -20,3 +20,11 @@ li {
 .footer-padding {
 	padding-bottom: 64px;
 }
+
+.menu-canvas {
+	background-color: white;
+}
+
+.center-block {
+	margin: auto;
+}
