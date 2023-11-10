@@ -29,6 +29,25 @@ export default function Menu() {
                                 <h3 className="menu-title">Appetizers</h3>
                             </div>
                         </div>
+                        <br/><br/>
+                        <div className="menu-canvas">
+                            <div className="menu-section center-align main-bg-img">
+                                <h3 className="menu-title">Mains</h3>
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div className="menu-canvas">
+                            <div className="menu-section center-align dessert-bg-img">
+                                <h3 className="menu-title">Desserts</h3>
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div className="menu-canvas">
+                            <div className="menu-section center-align beverage-bg-img">
+                                <h3 className="menu-title">Beverages</h3>
+                            </div>
+                        </div>
+                        <br/><br/>
                     </Col>
                     <Col l={3} m={2} s={1}/>
                 </Row>

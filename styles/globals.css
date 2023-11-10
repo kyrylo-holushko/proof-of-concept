@@ -57,3 +57,6 @@ li {
 }
 
 .appetizer-bg-img {background-image: var(--appetizer)}
+.main-bg-img {background-image: var(--main)}
+.dessert-bg-img {background-image: var(--dessert)}
+.beverage-bg-img {background-image: var(--beverage)}
