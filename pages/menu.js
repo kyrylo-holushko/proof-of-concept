@@ -1,12 +1,18 @@
 import { Container, Row, Col, Card, CardTitle, Icon } from "react-materialize"
 import useSWR from "swr"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { MenuContext } from "./_app";
+import { useRouter } from "next/router";
 
 export default function Menu() {
 
-    const [show, setShow] = useState(false);
+    const router = useRouter();
+    
+    const { menu, setMenu } = useContext(MenuContext);
 
-    const { data } = useSWR('http://localhost:3000/api/hello');
+    //const [show, setShow] = useState(false);
+
+    //const { data } = useSWR('http://localhost:3000/api/hello');
 
     //https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7
     //https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u
@@ -14,6 +20,12 @@ export default function Menu() {
     //https://res.cloudinary.com/dmtjposo5/gab/beverage/kcppriy7nikyshpzxjmr
 
     // TEST https://soranews24.com/wp-content/uploads/sites/3/2021/10/pad-thai-oatmeal1.jpg?resize=640,480
+
+    function handleSelection(section){
+        localStorage.setItem('section', section);
+        setMenu(section);
+        router.push("/section");
+    }
     
     return (
         <>
@@ -25,25 +37,33 @@ export default function Menu() {
                         <h2>Menu Page</h2>
                         <br/><br/>
                         <div className="menu-canvas">
-                            <div className="menu-section center-align appetizer-bg-img">
+                            <div className="menu-section center-align appetizer-bg-img"
+                                onClick={e=>{handleSelection('appetizer')}}
+                                >
                                 <h3 className="menu-title">Appetizers</h3>
                             </div>
                         </div>
                         <br/><br/>
                         <div className="menu-canvas">
-                            <div className="menu-section center-align main-bg-img">
+                            <div className="menu-section center-align main-bg-img"
+                                onClick={e=>{handleSelection('main')}}
+                                >
                                 <h3 className="menu-title">Mains</h3>
                             </div>
                         </div>
                         <br/><br/>
                         <div className="menu-canvas">
-                            <div className="menu-section center-align dessert-bg-img">
+                            <div className="menu-section center-align dessert-bg-img"
+                                onClick={e=>{handleSelection('dessert')}}
+                                >
                                 <h3 className="menu-title">Desserts</h3>
                             </div>
                         </div>
                         <br/><br/>
                         <div className="menu-canvas">
-                            <div className="menu-section center-align beverage-bg-img">
+                            <div className="menu-section center-align beverage-bg-img"
+                                onClick={e=>{handleSelection('beverage')}}
+                                >
                                 <h3 className="menu-title">Beverages</h3>
                             </div>
                         </div>

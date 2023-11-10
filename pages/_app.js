@@ -1,16 +1,22 @@
 import '../styles/globals.css'
 import 'materialize-css/dist/css/materialize.min.css'
-import { useEffect } from 'react'
+import { useEffect, useState, createContext } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import { SWRConfig } from 'swr';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
+export const MenuContext = createContext();
+
 function MyApp({ Component, pageProps }) {
+
+    const [menu, setMenu] = useState();
 
     useEffect(()=>{
         import('materialize-css/dist/js/materialize');
+        const section = localStorage.getItem('section') || null;
+        setMenu(section);
     },[]);
 
     return (
@@ -24,9 +30,11 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Layout>
                 <SWRConfig value={{ fetcher }}>
-                    <div className="footer-padding">
-                        <Component {...pageProps}/>
-                    </div>
+                    <MenuContext.Provider value={{ menu, setMenu }}>
+                        <div className="footer-padding">
+                            <Component {...pageProps}/>
+                        </div>
+                    </MenuContext.Provider>
                 </SWRConfig>
             </Layout>  
         </>
