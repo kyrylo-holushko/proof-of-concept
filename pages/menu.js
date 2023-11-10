@@ -19,29 +19,30 @@ export default function Menu() {
         <>
             <Container>
                 <Row>
-                    <Col l={3}/>
-                    <Col l={6} className="center-align">
+                    <Col l={3} m={2} s={1}/>
+                    <Col l={6} m={8} s={10} className="center-align">
                         <br/><br/>
                         <h2>Menu Page</h2>
                         <br/><br/>
-                        <Card
-                            actions={[
-                                <a key="1" href="#">This is a Link</a>
-                            ]}
-                            closeIcon={<Icon>close</Icon>}
-                            header={<CardTitle image="https://materializecss.com/images/sample-1.jpg">Card Title</CardTitle>}
-                            revealIcon={<Icon>more_vert</Icon>}
-                            >
-                            Here is the standard card with an image thumbnail.
-                        </Card>
+                        <div className="menu-canvas">
+                            <div className="menu-section center-align">
+                                
+                                    <div className="center-align valign-wrapper">
+                                        <h3 className="menu-title">Appetizers</h3>
+                                    </div>
+                                        
+                                       
+                                
+                            </div>
+                        </div>
                     </Col>
-                    <Col l={3}/>
+                    <Col l={3} m={2} s={1}/>
                 </Row>
             </Container>
         </>
     )
 }
-
+//image="https://materializecss.com/images/sample-1.jpg"
 {/* <br/><br/>
                 <h2>Menu Page</h2>
                 <br/><br/>
