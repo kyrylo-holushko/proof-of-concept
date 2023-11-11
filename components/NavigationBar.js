@@ -39,10 +39,10 @@ export default function NavigationBar() {
     //
     return (
         <>
-            <Navbar menuIcon={<Icon>menu</Icon>} className="yellow darken-3">
-                <Link href="/"><NavItem>Home</NavItem></Link>
-                <Link href="/menu"><NavItem>Menu</NavItem></Link>
-                <Link href="/contact"><NavItem>Contact</NavItem></Link>
+            <Navbar menuIcon={<Icon>menu</Icon>} className="yellow darken-2">
+                <Link href="/"><NavItem className="black-text">Home</NavItem></Link>
+                <Link href="/menu"><NavItem className="black-text">Menu</NavItem></Link>
+                <Link href="/contact"><NavItem className="black-text">Contact</NavItem></Link>
             </Navbar>
         </>
     )

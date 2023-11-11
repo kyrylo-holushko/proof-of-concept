@@ -24,32 +24,34 @@ export default function Section(){
         <>
             <Container>
                 <Row>
-                    <Col l={3} m={2} s={1}/>
-                    <Col l={6} m={8} s={10} className="center-align">
+                    <Col xl={4} l={3} m={2} s={1}/>
+                    <Col xl={4} l={6} m={8} s={10} className="center-align">
                         <br/><br/>
                         <h3>{data?.title}</h3>
                         <br/><br/>
                     {data ? 
-                    data.list.map(item=>{
+                    data.list.map((item,i)=>{
                         return (
                             <> 
-                                <Row className="p1">
-                                    <Card
-                                        actions={[
-                                            <a key="1" href="#">This is a link</a>
-                                        ]}
+                                <Row>
+                                    <Card   
                                         closeIcon={<Icon>close</Icon>}
                                         header={<CardTitle image={item?.image} reveal waves="light"/>}
-                                        horizontal
-                                        reveal={<p>{item?.description}</p>}
+                                        reveal={
+                                        <p>
+                                            {item?.description}
+                                            {item?.kcal_s && item?.price_s && <p>Small - {item?.kcal_s} Cal ${item?.price_s}<br/></p>}
+                                            {item?.kcal_l && item?.price_l && <p>{item?.kcal_s && item?.price_s && <span>Large - </span>}{item?.kcal_l} Cal ${item?.price_l}</p>}
+                                            {item?.spicy && <p><br/>spicy</p>}
+                                            {item?.vegan && <p><br/>vegan</p>}
+                                        </p>
+                                        }
                                         revealIcon={<Icon>more_vert</Icon>}
-                                        className="menu-item"
+                                        className="yellow lighten-5 left-align"
+                                        title={item?.name}
+                                        key={i}
                                         >
-                                        {item?.name}<br/><br/>
-                                        {item?.kcal_s && item?.price_s && <p>Small - {item?.kcal_s} Cal ${item?.price_s}<br/></p>}
-                                        {item?.kcal_l && item?.price_l && <p>{item?.kcal_s && item?.price_s && <span>Large - </span>}{item?.kcal_l} Cal ${item?.price_l}</p>}
-                                        {item?.spicy && <p><br/>spicy</p>}
-                                        {item?.vegan && <p><br/>vegan</p>}
+                                        
                                     </Card>
                                 </Row>
                             </>
@@ -57,7 +59,7 @@ export default function Section(){
                     })  
                     : <h4>Error</h4>}
                     </Col>
-                    <Col l={3} m={2} s={1}/>
+                    <Col xl={4} l={3} m={2} s={1}/>
                 </Row>
             </Container>
         </>
@@ -73,3 +75,8 @@ export default function Section(){
     </>)
   })}
   {(favouritesList.length===0) && <h4>Nothing Here. Try adding some new artwork to the list.</h4>} */
+
+
+/*   actions={[
+    <a key="1" href="#">This is a link</a>
+]} */
