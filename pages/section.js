@@ -38,16 +38,24 @@ export default function Section(){
                                         closeIcon={<Icon>close</Icon>}
                                         header={<CardTitle image={item?.image} reveal waves="light"/>}
                                         reveal={
-                                        <p>
-                                            {item?.description}
-                                            {item?.kcal_s && item?.price_s && <p>Small - {item?.kcal_s} Cal ${item?.price_s}<br/></p>}
-                                            {item?.kcal_l && item?.price_l && <p>{item?.kcal_s && item?.price_s && <span>Large - </span>}{item?.kcal_l} Cal ${item?.price_l}</p>}
-                                            {item?.spicy && <p><br/>spicy</p>}
-                                            {item?.vegan && <p><br/>vegan</p>}
-                                        </p>
+                                        <div className="menu-item">
+                                            <div><br/>{item?.description}<br/></div>
+                                            <div className="menu-item-details">
+                                                <p>
+                                                {item?.kcal_s && item?.price_s && `Small - ${item?.kcal_s} Cal $${item?.price_s}`}
+                                                <br/> 
+                                                {item?.kcal_s && item?.price_s && 'Large - '}
+                                                {item?.kcal_l && item?.price_l && `${item?.kcal_l} Cal $${item?.price_l}`}
+                                                <br/><br/>
+                                                {item?.spicy && 'spicy'}
+                                                <br/>
+                                                {item?.vegan && 'vegan'}
+                                                </p>
+                                            </div>
+                                        </div>
                                         }
                                         revealIcon={<Icon>more_vert</Icon>}
-                                        className="yellow lighten-5 left-align"
+                                        className="left-align"
                                         title={item?.name}
                                         key={i}
                                         >
@@ -66,17 +74,4 @@ export default function Section(){
     )
 
 }
-
-/* {(favouritesList.length>0) && favouritesList.map(artID=>{
-    return (<>
-      <Col lg={3} key={`${artID}`}>
-        <ArtworkCard objectID={`${artID}`}/>
-      </Col>
-    </>)
-  })}
-  {(favouritesList.length===0) && <h4>Nothing Here. Try adding some new artwork to the list.</h4>} */
-
-
-/*   actions={[
-    <a key="1" href="#">This is a link</a>
-]} */
+//item?.kcal_s && item?.price_s

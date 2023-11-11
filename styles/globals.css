@@ -61,8 +61,3 @@ li {
 .main-bg-img {background-image: var(--main)}
 .dessert-bg-img {background-image: var(--dessert)}
 .beverage-bg-img {background-image: var(--beverage)}
-
-/* .layout {
-	text-shadow: 0 0 1px black, 0 0 2px black;
-	font-weight:bolder;
-} */
