@@ -1,4 +1,3 @@
-//import Card component
 import useSWR from "swr"
 import { Card, CardTitle, Icon, Col, Row, Container } from "react-materialize";
 import { useContext } from "react";
@@ -8,17 +7,8 @@ import { MenuContext } from "./_app";
 export default function Section(){
 
     const { menu } = useContext(MenuContext);
- 
-    //const { data } = useSWR('http://localhost:3000/api/hello');
-    const { data } = useSWR(menu ? `http://localhost:3000/api/${menu}` : null);
 
-    /* ,
-		kcal_s: 800,
-		kcal_l: 1000,
-		price_s: 9.99,
-		price_l: 11.99,
-		spicy: true,
-		vegan: false, */
+    const { data } = useSWR(menu ? `http://localhost:3000/api/${menu}` : null);
 
     return (
         <>
@@ -72,6 +62,4 @@ export default function Section(){
             </Container>
         </>
     )
-
 }
-//item?.kcal_s && item?.price_s

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Container } from 'react-materialize'
 
 export default function Home() {
@@ -17,7 +16,5 @@ export default function Home() {
 				<br/><br/><br/>
 			</div>
 		</>
-  )
+  	)
 }
-
-//<Image src="/vercel.svg" alt="Vercel Logo" width={108} height={24} />
