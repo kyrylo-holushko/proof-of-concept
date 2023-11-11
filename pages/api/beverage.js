@@ -1,5 +1,6 @@
-
-
+export default function handler(req, res) {
+    res.status(200).json({ title: 'Beverages', list: beverage })
+}
 
 const beverage = [
     {

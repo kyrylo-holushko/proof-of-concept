@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-    res.status(200).json({ data: dessert })
+    res.status(200).json({ title: 'Desserts', list: dessert })
 }
 
 const dessert = [
