@@ -1,5 +1,5 @@
 import { Container } from 'react-materialize'
-
+//Proof of Concept V2 (Without React-Materialize dependancy)
 export default function Home() {
     return (
 		<>
