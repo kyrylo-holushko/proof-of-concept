@@ -1,4 +1,4 @@
-import { Footer } from "react-materialize"
+
 
 export default function FooterBar(){
 

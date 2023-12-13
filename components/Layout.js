@@ -3,7 +3,6 @@ import FooterBar from "./FooterBar"
 import { useEffect, useState } from 'react'
 //import dynamic from "next/dynamic";
 //import M from 'materialize-css'
-import { NavItem, Navbar } from "react-materialize"
 
 export default function Layout(props){
 

@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, CardTitle, Icon } from "react-materialize"
+
 import { useState, useContext } from "react";
 import { MenuContext } from "./_app";
 import { useRouter } from "next/router";
@@ -17,10 +17,10 @@ export default function Menu() {
     
     return (
         <>
-            <Container>
-                <Row>
-                    <Col l={3} m={2} s={1}/>
-                    <Col l={6} m={8} s={10} className="center-align">
+            <div className="container">
+                <div className="row">
+                    <div className="col l3 m2 s1"></div>
+                    <div className="col l6 m8 s10 center-align">
                         <br/><br/>
                         <h2>Menu Page</h2>
                         <br/><br/>
@@ -56,10 +56,10 @@ export default function Menu() {
                             </div>
                         </div>
                         <br/><br/>
-                    </Col>
-                    <Col l={3} m={2} s={1}/>
-                </Row>
-            </Container>
+                    </div>
+                    <div className="col l3 m2 s1"></div>
+                </div>
+            </div>
         </>
     )
 }

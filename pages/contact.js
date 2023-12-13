@@ -1,11 +1,10 @@
-import { Container } from "react-materialize"
 
 
 export default function Contact() {
 
     return (
         <>
-            <Container className="center-text">
+            <div className="container center-text">
                 <br/><br/>
                 <h4>Information</h4>
                 <br/><br/>
@@ -29,7 +28,7 @@ export default function Contact() {
                     </big>
                 </div>
                 <br/><br/><br/>
-            </Container>
+            </div>
         </>
     )
 }

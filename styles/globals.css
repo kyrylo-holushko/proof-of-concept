@@ -9,12 +9,14 @@
 	text-align: center;
 }
 
+/*#859FBC*/
 .custom-footer {
 	height: 64px;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 	z-index: 9999;
+	box-shadow: 0px -1px 2.5px #78889C;
 }
 
 li {
@@ -61,3 +63,12 @@ li {
 .main-bg-img {background-image: var(--main)}
 .dessert-bg-img {background-image: var(--dessert)}
 .beverage-bg-img {background-image: var(--beverage)}
+
+@media (max-width: 600px) {
+	.custom-footer { height: 56px;}
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
