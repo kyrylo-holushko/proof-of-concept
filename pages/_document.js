@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-//brown lighten-5
+
 export default function Document() {
 
     return ( 
@@ -11,7 +11,7 @@ export default function Document() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Html lang="en">
-                <body className="white">
+                <body className="brown lighten-5">
                     <Main />
                     <NextScript />
                 </body>

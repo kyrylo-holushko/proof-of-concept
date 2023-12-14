@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }) {
         import('materialize-css/dist/js/materialize');
         const section = localStorage.getItem('section') || null;
         setMenu(section);
+        const M = require('materialize-css');  
     },[]);
 
     return (

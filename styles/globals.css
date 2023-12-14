@@ -35,7 +35,7 @@ li {
 	background-color: white;
 	box-shadow: 0 0 4px grey, 0 0 8px black;
 	aspect-ratio: 4/3;
-	border-radius: 3px;
+	border-radius: 12px;
 }
 
 .menu-section {
@@ -72,3 +72,15 @@ li {
     box-shadow: none !important;
 }
 
+.card {
+	border-radius: 12px !important;
+}
+
+.card img {
+	border-top-left-radius: 12px !important;
+	border-top-right-radius: 12px !important;
+}
+
+.card-reveal {
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}

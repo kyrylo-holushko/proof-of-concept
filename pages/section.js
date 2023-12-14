@@ -2,7 +2,6 @@ import useSWR from "swr"
 import { useContext } from "react";
 import { MenuContext } from "./_app";
 //<p><a href="#">This is a link</a></p>
-//"card-title grey-text text-darken-4"
 export default function Section(){
 
     const { menu } = useContext(MenuContext);
@@ -11,11 +10,6 @@ export default function Section(){
 
     return (
         <>
-            <style jsx>{`
-                .card-reveal {
-                    background-color: rgba(0, 0, 0, 0.8);
-                }
-            `}</style>
             <div className="container">
                 <div className="row">
                     <div className="col xl4 l3 m2 s1"></div>
