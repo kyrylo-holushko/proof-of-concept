@@ -2,7 +2,7 @@ export default function handler(req, res) {
     res.status(200).json({ title: 'Appetizers', list: appetizer })
 }
 
-const appetizer = [
+export const appetizer = [
     {
 		id: 1,
 		name: "Tom Yum Soup",

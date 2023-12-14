@@ -2,7 +2,7 @@ export default function handler(req, res) {
     res.status(200).json({ title: 'Mains', list: main })
 }
 
-const main = [
+export const main = [
     {
         id: 1,
         name: "Steamed Fish",

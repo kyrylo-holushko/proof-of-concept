@@ -64,15 +64,11 @@ li {
 .dessert-bg-img {background-image: var(--dessert)}
 .beverage-bg-img {background-image: var(--beverage)}
 
-@media (max-width: 600px) {
-	.custom-footer { height: 56px;}
-}
-
 .no-shadow {
     box-shadow: none !important;
 }
 
-.card {
+.card, .modal {
 	border-radius: 12px !important;
 }
 
@@ -83,4 +79,25 @@ li {
 
 .card-reveal {
 	background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.carousel-item {
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	.custom-footer { height: 56px; }
+	.modal { width: 90% !important; }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .modal { width: 75% !important; }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .modal { width: 50% !important; }
+}
+
+@media (min-width: 1201px) {
+    .modal { width: 35% !important; }
 }
