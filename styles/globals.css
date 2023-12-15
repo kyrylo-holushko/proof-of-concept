@@ -85,6 +85,10 @@ li {
 	font-weight: bold;
 }
 
+/* .carousel-slider {
+    height: 400px !important;
+} */
+
 @media (max-width: 600px) {
 	.custom-footer { height: 56px; }
 	.modal { width: 90% !important; }

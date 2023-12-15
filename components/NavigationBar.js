@@ -13,7 +13,7 @@ export default function NavigationBar() {
         var elems = document.querySelectorAll('.sidenav');
         var instance = M.Sidenav.init(elems);
     },[])
-//
+
     return (
         <>
             <nav>
