@@ -55,8 +55,11 @@ li {
 .menu-title {
 	display: inline-block;
 	color: white;
-	text-shadow: 0 0 4px black, 0 0 8px black;
 	font-size: 2.5em;
+}
+
+.menu-title, .promo-container {
+	text-shadow: 0 0 4px black, 0 0 8px black;
 }
 
 .appetizer-bg-img {background-image: var(--appetizer)}
@@ -88,6 +91,37 @@ li {
 /* .carousel-slider {
     height: 400px !important;
 } */
+
+.modal-arrows {
+	cursor: pointer;
+}
+
+.promo-container {
+	position: relative;
+	display: inline-block;
+}
+
+.promo-container img {
+	margin: auto;
+	display: block;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+}
+
+.arrow-padding {
+	padding-top: 24px;
+}
+
+.modal-title {
+	margin-bottom: 0;
+	padding-bottom: 24px;
+}
 
 @media (max-width: 600px) {
 	.custom-footer { height: 56px; }
