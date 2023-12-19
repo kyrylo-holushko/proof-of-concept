@@ -17,19 +17,19 @@ function promoBuilder(promotions){
         switch(element[0]){
             case 'a':
                     let a = appetizer.find(item => item.id === element[1]);
-                    data.push({ name: a.name, image: a.image, discount: element[2] });
+                    data.push({ name: a.name, image: a.image, discount: element[2], link: a.link });
                 break;
             case 'b':
                     let b = beverage.find(item => item.id === element[1]);
-                    data.push({ name: b.name, image: b.image, discount: element[2] });
+                    data.push({ name: b.name, image: b.image, discount: element[2], link: b.link });
                 break;
             case 'd':
                     let d = dessert.find(item => item.id === element[1]);
-                    data.push({ name: d.name, image: d.image, discount: element[2] });
+                    data.push({ name: d.name, image: d.image, discount: element[2], link: d.link });
                 break;
             case 'm':
                     let m = main.find(item => item.id === element[1]);
-                    data.push({ name: m.name, image: m.image, discount: element[2] });
+                    data.push({ name: m.name, image: m.image, discount: element[2], link: m.link });
                 break;
         }
     });

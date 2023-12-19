@@ -13,7 +13,8 @@ export const appetizer = [
 		price_l: 11.99,
 		spicy: true,
 		vegan: false,
-		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/qs8rpupmnsav8fybedqs'
+		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/qs8rpupmnsav8fybedqs',
+		link: 'https://square.link/u/PiXV0f6Q?src=embed'
     },
     {
 		id: 2,
@@ -25,7 +26,8 @@ export const appetizer = [
 		price_l: 8.49,
 		spicy: false,
 		vegan: false,
-		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/urbza8dbfflrqy81jhtt'
+		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/urbza8dbfflrqy81jhtt',
+		link: 'https://square.link/u/UvsdkZS3?src=embed'
     },
     {
 		id: 3,
@@ -37,7 +39,8 @@ export const appetizer = [
 		price_l: 5.99,
 		spicy: false,
 		vegan: false,
-		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/puwab1nnpsxlmkrhvfzp'
+		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/puwab1nnpsxlmkrhvfzp',
+		link: 'https://square.link/u/0VoOpJiH?src=embed'
     },
     {
 		id: 4,
@@ -49,6 +52,7 @@ export const appetizer = [
 		price_l: 8.95,
 		spicy: false,
 		vegan: true,
-		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7'
+		image: 'https://res.cloudinary.com/dmtjposo5/gab/appetizer/jz9bz8o4dreqxqqhhnr7',
+		link: 'https://square.link/u/VTjq2K7J?src=embed'
     }
 ]
