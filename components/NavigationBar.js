@@ -27,10 +27,10 @@ export default function NavigationBar() {
                 </div>
             </nav>
 
-            <ul className="sidenav" id="mobile-demo">
-            <li><Link href="/">Home</Link></li>
-                    <li><Link href="/menu">Menu</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+            <ul className="sidenav sidenav-close" id="mobile-demo">
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/menu">Menu</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
             </ul>
         </>
     )
