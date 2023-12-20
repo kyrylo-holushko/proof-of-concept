@@ -12,7 +12,7 @@ export const MenuContext = createContext();
 
 function MyApp({ Component, pageProps }) {
     
-    const { data } = useSWR("https://proof-of-concept-gab.vercel.app/api/promo", fetcher);
+    const { data } = useSWR("https://proof-of-concept-gab.vercel.app:3000/api/promo", fetcher);
     const [menu, setMenu] = useState();
     const [modalPage, setModalPage] = useState(0);
 
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         setTimeout(()=>{
             let instance = M.Modal.getInstance(promoModal);
             instance.open();
-        }, 5000); // set to 8000
+        }, 4000); // set to 8000
     },[]);
     
     function prevPromo(){
