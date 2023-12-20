@@ -2,7 +2,7 @@ export default function handler(req, res) {
     res.status(200).json({ title: 'Desserts', list: dessert })
 }
 
-const dessert = [
+export const dessert = [
     {
         id: 1,
         name: "Mochi",
@@ -11,7 +11,8 @@ const dessert = [
         price_l: 4.8,
         spicy: false,
         vegan: true,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/jlusmortt9bltxktrzxw'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/jlusmortt9bltxktrzxw',
+        link: 'https://square.link/u/Y34lGkZU?src=embed'
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ const dessert = [
         price_l: 6.99,
         spicy: false,
         vegan: true,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/i4tgmivq19bt1seo5dun'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/i4tgmivq19bt1seo5dun',
+        link: 'https://square.link/u/52U80Olv?src=embed'
     },
     {
         id: 3,
@@ -31,6 +33,7 @@ const dessert = [
         price_l: 7.35,
         spicy: false,
         vegan: true,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/y2y9ldldmbm9cydxrubs'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/dessert/y2y9ldldmbm9cydxrubs',
+        link: 'https://square.link/u/sZswzuQB?src=embed'
     }
 ]

@@ -1,32 +1,61 @@
 import '../styles/globals.css'
 import 'materialize-css/dist/css/materialize.min.css'
 import { useEffect, useState, createContext } from 'react'
-import Head from 'next/head'
 import Layout from '../components/Layout'
+import Head from 'next/head'
 import { SWRConfig } from 'swr';
+import useSWR from "swr"
+import $ from 'jquery'
+
+{/* <div class="carousel-fixed-item center">
+                                <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                            </div> */}
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 export const MenuContext = createContext();
 
 function MyApp({ Component, pageProps }) {
-
+    
+    const { data } = useSWR("http://localhost:3000/api/promo", fetcher);
+    console.log("SWR data:", data);
     const [menu, setMenu] = useState();
+    //const [triggerRerender, setTriggerRerender] = useState(false);
+    const [modalPage, setModalPage] = useState(0);
 
     useEffect(()=>{
         import('materialize-css/dist/js/materialize');
         const section = localStorage.getItem('section') || null;
         setMenu(section);
+        const M = require('materialize-css');
+        
+        var melems = document.querySelectorAll('.modal');
+        var minstances = M.Modal.init(melems);
+
+        var promoModal = document.querySelector('#modal1');
+        
+        setTimeout(()=>{
+            let instance = M.Modal.getInstance(promoModal);
+            instance.open();
+        }, 5000); // set to 8000
     },[]);
+
+    function prevPromo(){
+        let promoList = document.querySelectorAll("#promo > div");
+        if(modalPage>0 && modalPage<=(promoList.length-1))
+            setModalPage(modalPage-1);
+    }
+
+    function nextPromo(){
+        let promoList = document.querySelectorAll("#promo > div");
+        if(modalPage>=0 && modalPage<(promoList.length-1))
+            setModalPage(modalPage+1);
+    }
 
     return (
         <>
             <Head>
                 <title>Golden Abalone Bistro</title>
-                <meta name="Golden Abalone Bistro" content="demo next app" />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
-                <link rel="stylesheet" href="path/to/materialize.css"></link>
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout>
                 <SWRConfig value={{ fetcher }}>
@@ -36,9 +65,45 @@ function MyApp({ Component, pageProps }) {
                         </div>
                     </MenuContext.Provider>
                 </SWRConfig>
-            </Layout>  
+            </Layout>
+
+            <div id="modal1" className="modal">
+                <div className="modal-content">
+                <i className="material-icons right modal-close">close</i>
+                    <h4 className="center-text modal-title">SPECIAL PROMOTION</h4>
+                    <div id="promo" className="center-text"> 
+                        {data ? 
+                        data.promos.map((item,i)=>{
+                            return <div className="promo-container white-text" href={`#${i}`} key={i} data-id={i} style={{ display: i===modalPage ? "block" : "none"}}>
+                                <img src={item?.image} width="85%" height="auto"/>
+                                <div className="centered">
+                                    <h5>{item?.name}</h5><br/>
+                                    <h4>Discount: {item?.discount} Off</h4><br/>
+                                    <a className="waves-effect black waves-light btn-small" target="_blank" href={item?.link}>Buy now</a>
+                                </div>
+                            </div>
+                        }) 
+                        : <h4>Error</h4>}
+                    </div>
+                    <div className="center-text arrow-padding">
+                        <i className="medium material-icons modal-arrows" onClick={e=>{prevPromo()}}>keyboard_arrow_left</i>
+                        <i className="medium material-icons modal-arrows" onClick={e=>{nextPromo()}}>keyboard_arrow_right</i>
+                    </div>
+                </div>
+                
+            </div>  
         </>
     )   
 }
 
 export default MyApp
+
+
+/* {data ? 
+    data.promos.map((item,i)=>{
+        return <div className="carousel-item blue dark-text" href={`#${i}`} key={i}>
+            <h2>{item?.name}</h2><br/><br/>
+            <h3>Discount: {item?.discount} Off</h3>
+        </div>
+    }) 
+    : <h4>Error</h4>} */

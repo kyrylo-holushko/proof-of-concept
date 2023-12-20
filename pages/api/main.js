@@ -2,7 +2,7 @@ export default function handler(req, res) {
     res.status(200).json({ title: 'Mains', list: main })
 }
 
-const main = [
+export const main = [
     {
         id: 1,
         name: "Steamed Fish",
@@ -11,7 +11,8 @@ const main = [
         price_l: 16.99,
         spicy: false,
         vegan: false,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/be5xztuzz836pit3xz63'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/be5xztuzz836pit3xz63',
+        link: 'https://square.link/u/teyX1Lof?src=embed'
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ const main = [
         price_l: 14.45,
         spicy: true,
         vegan: false,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/xiqdzedfefrvcmakfp6u',
+        link: 'https://square.link/u/kfp5bz3i?src=embed'
     },
     {
         id: 3,
@@ -31,7 +33,8 @@ const main = [
         price_l: 18.99,
         spicy: false,
         vegan: false,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/o3pbdsicgjfhh1dtxcdf'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/o3pbdsicgjfhh1dtxcdf',
+        link: 'https://square.link/u/3m7VezBe?src=embed'
     },
     {
         id: 4,
@@ -41,6 +44,7 @@ const main = [
         price_l: 18.99,
         spicy: false,
         vegan: false,
-        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/wnzobko3smt0m3b5u4ce'
+        image: 'https://res.cloudinary.com/dmtjposo5/gab/main/wnzobko3smt0m3b5u4ce',
+        link: 'https://square.link/u/7lU42qMY?src=embed'
     }
 ]

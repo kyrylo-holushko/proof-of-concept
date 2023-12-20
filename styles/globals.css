@@ -9,12 +9,14 @@
 	text-align: center;
 }
 
+/*#859FBC*/
 .custom-footer {
 	height: 64px;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 	z-index: 9999;
+	box-shadow: 0px -1px 2.5px #78889C;
 }
 
 li {
@@ -33,12 +35,12 @@ li {
 	background-color: white;
 	box-shadow: 0 0 4px grey, 0 0 8px black;
 	aspect-ratio: 4/3;
-	border-radius: 3px;
+	border-radius: 12px;
 }
 
 .menu-section {
 	background-size: cover, contain;
-	aspect-ratio: inherit;
+	height: 100%;
 	border-radius: inherit;
 	cursor: pointer;
 	display: flex;
@@ -53,11 +55,92 @@ li {
 .menu-title {
 	display: inline-block;
 	color: white;
-	text-shadow: 0 0 4px black, 0 0 8px black;
 	font-size: 2.5em;
+}
+
+.menu-title, .promo-container {
+	text-shadow: 0 0 4px black, 0 0 8px black;
 }
 
 .appetizer-bg-img {background-image: var(--appetizer)}
 .main-bg-img {background-image: var(--main)}
 .dessert-bg-img {background-image: var(--dessert)}
 .beverage-bg-img {background-image: var(--beverage)}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.card, .modal {
+	border-radius: 12px !important;
+}
+
+.card img {
+	border-top-left-radius: 12px !important;
+	border-top-right-radius: 12px !important;
+}
+
+.card-action {
+	border-bottom-left-radius: 12px !important;
+	border-bottom-right-radius: 12px !important;
+}
+
+.card-reveal {
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.carousel-item {
+	font-weight: bold;
+}
+
+/* .carousel-slider {
+    height: 400px !important;
+} */
+
+.modal-arrows {
+	cursor: pointer;
+}
+
+.promo-container {
+	position: relative;
+	display: inline-block;
+}
+
+.promo-container img {
+	margin: auto;
+	display: block;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+}
+
+.arrow-padding {
+	padding-top: 24px;
+}
+
+.modal-title {
+	margin-bottom: 0;
+	padding-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+	.custom-footer { height: 56px; }
+	.modal { width: 90% !important; }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .modal { width: 75% !important; }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .modal { width: 50% !important; }
+}
+
+@media (min-width: 1201px) {
+    .modal { width: 35% !important; }
+}
