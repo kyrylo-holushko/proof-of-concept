@@ -1,5 +1,5 @@
 
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { MenuContext } from "./_app";
 import { useRouter } from "next/router";
 

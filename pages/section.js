@@ -1,7 +1,7 @@
 import useSWR from "swr"
 import { useContext } from "react";
 import { MenuContext } from "./_app";
-//<p><a href="#">This is a link</a></p>
+
 export default function Section(){
 
     const { menu } = useContext(MenuContext);
