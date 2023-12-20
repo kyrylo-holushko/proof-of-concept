@@ -23,6 +23,7 @@ export default function NavigationBar() {
                     <li><Link href="/" className="black-text">Home</Link></li>
                     <li><Link href="/menu" className="black-text">Menu</Link></li>
                     <li><Link href="/contact" className="black-text">Contact</Link></li>
+                    <li><a className="waves-effect black waves-light btn" target="_blank" href="https://golden-abalone-bistro.square.site/">Order now</a></li>
                 </ul>
                 </div>
             </nav>
@@ -31,6 +32,7 @@ export default function NavigationBar() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/menu">Menu</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
+                <li><a target="_blank" href="https://golden-abalone-bistro.square.site/">Order Now</a></li>
             </ul>
         </>
     )

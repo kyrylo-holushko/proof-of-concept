@@ -80,6 +80,11 @@ li {
 	border-top-right-radius: 12px !important;
 }
 
+.card-action {
+	border-bottom-left-radius: 12px !important;
+	border-bottom-right-radius: 12px !important;
+}
+
 .card-reveal {
 	background-color: rgba(0, 0, 0, 0.8) !important;
 }

@@ -49,6 +49,9 @@ export default function Section(){
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="card-action">
+                                            <a className="waves-effect black waves-light btn" target="_blank" href={item?.link}>Buy now</a>
+                                        </div>
                                     </div>
 
                                 </div>

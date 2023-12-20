@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
         setTimeout(()=>{
             let instance = M.Modal.getInstance(promoModal);
             instance.open();
-        }, 3000); // set to 8000
+        }, 5000); // set to 8000
     },[]);
 
     function prevPromo(){
@@ -77,8 +77,9 @@ function MyApp({ Component, pageProps }) {
                             return <div className="promo-container white-text" href={`#${i}`} key={i} data-id={i} style={{ display: i===modalPage ? "block" : "none"}}>
                                 <img src={item?.image} width="85%" height="auto"/>
                                 <div className="centered">
-                                    <h2>{item?.name}</h2><br/>
-                                    <h3>Discount: {item?.discount} Off</h3>
+                                    <h5>{item?.name}</h5><br/>
+                                    <h4>Discount: {item?.discount} Off</h4><br/>
+                                    <a className="waves-effect black waves-light btn-small" target="_blank" href={item?.link}>Buy now</a>
                                 </div>
                             </div>
                         }) 
