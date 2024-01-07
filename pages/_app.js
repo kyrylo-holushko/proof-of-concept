@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         setTimeout(()=>{
             let instance = M.Modal.getInstance(promoModal);
             instance.open();
-        }, 4000); // set to 8000
+        }, 4000); //set to 8000
     },[]);
     
     function prevPromo(){
