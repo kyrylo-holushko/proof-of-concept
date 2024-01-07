@@ -5,7 +5,7 @@ import { MenuContext } from "./_app";
 export default function Section(){
 
     const { menu } = useContext(MenuContext);
-
+    
     const { data } = useSWR(menu ? `https://proof-of-concept-gab.vercel.app/api/${menu}` : null);
 
     return (
@@ -25,7 +25,7 @@ export default function Section(){
                                     
                                     <div className="card" key={i}>
                                         <div className="card-image waves-effect waves-block waves-light">
-                                        <img className="activator" src={item?.image}/>
+                                        <img className="activator" src={item?.image} alt="missing image" width="100%" height="auto"/>
                                         </div>
                                         <div className="card-content">
                                         <span className="card-title activator grey-text text-darken-4">{item?.name}<i className="material-icons right">more_vert</i></span>

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 /* if (typeof window !== 'undefined') {
     require('materialize-css');
 } */
+//const Link = dynamic(() => import('next/Link'))
 
 export default function NavigationBar() {
 

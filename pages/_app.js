@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
                         {data ? 
                         data.promos.map((item,i)=>{
                             return <div className="promo-container white-text" href={`#${i}`} key={i} data-id={i} style={{ display: i===modalPage ? "block" : "none"}}>
-                                <img src={item?.image} width="85%" height="auto"/>
+                                <img src={item?.image} width="85%" height="auto" alt="missing image"/>
                                 <div className="centered">
                                     <h5>{item?.name}</h5><br/>
                                     <h4>Discount: {item?.discount} Off</h4><br/>
