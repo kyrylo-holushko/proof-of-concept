@@ -128,6 +128,13 @@ li {
 	padding-bottom: 24px;
 }
 
+.map {
+	width: 100%;
+	aspect-ratio: 4/3;
+	border-radius: 12px;
+	border: 0;
+}
+
 @media (max-width: 600px) {
 	.custom-footer { height: 56px; }
 	.modal { width: 90% !important; }
