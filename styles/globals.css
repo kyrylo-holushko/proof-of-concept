@@ -135,19 +135,33 @@ li {
 	border: 0;
 }
 
+.page-grid {
+	display: grid !important;
+}
+
 @media (max-width: 600px) {
 	.custom-footer { height: 56px; }
 	.modal { width: 90% !important; }
+	.page-grid { grid-template-columns: 1fr 10fr 1fr !important; }
 }
 
 @media (min-width: 601px) and (max-width: 992px) {
     .modal { width: 75% !important; }
+	.page-grid { grid-template-columns: 1fr 4fr 1fr !important; }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
     .modal { width: 50% !important; }
+	.page-grid { grid-template-columns: 1fr 2fr 1fr !important; }
 }
 
 @media (min-width: 1201px) {
     .modal { width: 35% !important; }
+	.page-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+}
+
+@media (width >= 993px) {
+	.page-grid {
+		min-width: 100vw !important;
+	}
 }

@@ -5,8 +5,8 @@ import { MenuContext } from "./_app";
 export default function Section(){
 
     const { menu } = useContext(MenuContext);
-    
-    const { data } = useSWR(menu ? `https://proof-of-concept-gab.vercel.app/api/${menu}` : null);
+    //const { data } = useSWR(menu ? `https://proof-of-concept-gab.vercel.app/api/${menu}` : null);
+    const { data } = useSWR(menu ? `http://localhost:3000/api/${menu}` : null);
 
     return (
         <>

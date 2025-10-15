@@ -11,8 +11,8 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 export const MenuContext = createContext();
 
 function MyApp({ Component, pageProps }) {
-    
-    const { data } = useSWR("https://proof-of-concept-gab.vercel.app/api/promo", fetcher);
+    //const { data } = useSWR("https://proof-of-concept-gab.vercel.app/api/promo", fetcher);
+    const { data } = useSWR("http://localhost:3000/api/promo", fetcher);
     const [menu, setMenu] = useState();
     const [modalPage, setModalPage] = useState(0);
 
@@ -48,14 +48,15 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Golden Abalone Bistro</title>
             </Head>
             <Layout>
                 <SWRConfig value={{ fetcher }}>
                     <MenuContext.Provider value={{ menu, setMenu }}>
-                        <div className="footer-padding">
+                       
                             <Component {...pageProps}/>
-                        </div>
+
                     </MenuContext.Provider>
                 </SWRConfig>
             </Layout>
