@@ -13,9 +13,9 @@ export default function Contact() {
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1770.2251549214545!2d-79.32655822247024!3d43.84922995483986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d45b25669ba1%3A0xdf8e08d7c524d302!2sBirchmount%20Rd%20%26%20Enterprise%20Blvd%2C%20Markham%2C%20ON%20L6G%200E7!5e1!3m2!1sen!2sca!4v1704658368120!5m2!1sen!2sca" 
                         className="map"
-                        allowfullscreen="" 
+                        allowFullScreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerPolicy="no-referrer-when-downgrade">
                     </iframe>
                     <br/><br/>
                     <big>
